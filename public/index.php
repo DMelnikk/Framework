@@ -10,6 +10,12 @@ require_once __DIR__ . '/../config/init.php';
 require_once ROOT . '/vendor/autoload.php';
 
 $app = new \PHPFramework\Application();
+// подключаем файл с маршрутами после создания обьекта , что-бы был доступ к объекту
+require_once CONFIG . '/routes.php';
+
+//dump($app->router->getRoutes());
+
+$app->run();
 
 
 
