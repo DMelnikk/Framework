@@ -9,9 +9,7 @@ if(PHP_MAJOR_VERSION < 8) {
 require_once __DIR__ . '/../config/init.php';
 require_once ROOT . '/vendor/autoload.php';
 
-new \PHPFramework\Test();
-echo '<br>';
-new \App\Controllers\Test();
+$app = new \PHPFramework\Application();
 
 
 
