@@ -1,14 +1,18 @@
 <?php
 
-echo '<pre>';
-print_r($_SERVER['REQUEST_URI']);
-echo '</pre>';
 
 
-echo '<pre>';
-print_r($_SERVER['QUERY_STRING']);
-echo '</pre>';
+if(PHP_MAJOR_VERSION < 8) {
+    die("Sorry this is only for 8+ PHP VERSIONS, YOUR VERSION IS . " . PHP_MAJOR_VERSION);
+}
 
-echo '<pre>';
-print_r($_GET);
-echo '</pre>';
+require_once __DIR__ . '/../config/init.php';
+require_once ROOT . '/vendor/autoload.php';
+
+new \PHPFramework\Test();
+echo '<br>';
+new \App\Controllers\Test();
+
+
+
+
